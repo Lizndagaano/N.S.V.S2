@@ -2,12 +2,10 @@ package com.example.nsvs
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SigninActivity : AppCompatActivity() {
@@ -35,15 +33,16 @@ class SigninActivity : AppCompatActivity() {
            if (emailString.isEmpty() || passwordstring.isEmpty()) {
                 Toast.makeText(this, "Fill in all fields", Toast.LENGTH_LONG).show()
             } else {
-                auth.createUserWithEmailAndPassword(emailString, passwordstring)
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-                            val intent = Intent(this, MainActivity2::class.java)
-                            startActivity(intent)
-                        } else {
-                            Toast.makeText(this, task.exception?.message.toString(), Toast.LENGTH_LONG).show()
-                        }
+                auth.signInWithEmailAndPassword(emailString, passwordstring).addOnCompleteListener {
+                    task->
+                    if (task.isSuccessful){
+                        val intent = Intent(this, MainActivity2::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this, task.exception?.message.toString(), Toast.LENGTH_LONG).show()
                     }
+                }
             }
 
         }
