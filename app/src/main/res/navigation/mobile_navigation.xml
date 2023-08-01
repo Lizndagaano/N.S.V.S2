@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.nsvs.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_academics"
+        android:name="com.example.nsvs.ui.AcademicsFragment"
+        android:label="Academics"
+        tools:layout="@layout/fragment_academics" />
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.nsvs.ui.About_UsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about__us" />
+    <fragment
+        android:id="@+id/nav_features"
+        android:name="com.example.nsvs.ui.FeaturesFragment"
+        android:label="Features"
+        tools:layout="@layout/fragment_features" />
+    <fragment
+        android:id="@+id/nav_chapel"
+        android:name="com.example.nsvs.ui.ChapelFragment"
+        android:label="Chapel"
+        tools:layout="@layout/fragment_chapel" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.nsvs.ui.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_curricular"
+        android:name="com.example.nsvs.ui.CurricularFragment"
+        android:label="Curricular"
+        tools:layout="@layout/fragment_curricular" />
+    <fragment
+        android:id="@+id/nav_MDD"
+        android:name="com.example.nsvs.ui.MddFragment"
+        android:label="MDD"
+        tools:layout="@layout/fragment_mdd" />
+    <fragment
+        android:id="@+id/nav_sports"
+        android:name="com.example.nsvs.ui.SportsFragment"
+        android:label="Sports"
+        tools:layout="@layout/fragment_sports" />
+    <fragment
+        android:id="@+id/nav_email"
+        android:name="com.example.nsvs.ui.EmailFragment"
+        android:label="Email"
+        tools:layout="@layout/fragment_email" />
+
+</navigation>
